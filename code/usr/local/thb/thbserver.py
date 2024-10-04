@@ -2,8 +2,8 @@
 #
 #  @filename : main.cpp
 #  @brief : Server für THB-Anzeige
-#  @author : Borys 19 Nov 2018   
-##    
+#  @author : Borys 19 Nov 2018
+##
 from sys import exc_info
 import socket
 # Hilfe:
