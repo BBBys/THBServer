@@ -1,0 +1,28 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          thbStartup
+# Required-Start:
+# Required-Stop:     
+# Should-Stop:       
+# X-Start-Before:    
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start-Anzeige auf Display
+# Description:       
+### END INIT INFO
+
+case "$1" in
+  stop|reload|restart|force-reload)
+        echo "thbStartup STOP $1"
+        ;;
+
+  start)
+        echo "thbStartup START $1"
+        /usr/local/thb/thbStartup.py ;;
+
+  *)
+        echo "Usage: ${0:-} {start|stop|status|restart|reload|force-reload} und nicht $1" >&2
+        exit 1
+        ;;
+esac
